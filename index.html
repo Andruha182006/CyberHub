@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <!-- ====== МЕТАДАНІ ТА ПІДКЛЮЧЕННЯ ====== -->
+    <link rel="icon" type="image/png" href="img/favicon.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CyberHub - Кіберспортивний клуб</title>
+    
+    <!-- Попереднє завантаження стилів -->
+    <link rel="preload" as="style" href="css/style.css">
+    <link rel="preload" as="style" href="css/style_services.css">
+    
+    <!-- Основні стилі -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style_services.css">
+    <link rel="stylesheet" href="css/style_tour.css">
+    
+    <!-- Скрипти -->
+    <script src="js/script.js" defer></script>
+    <script src="js/script_services.js" defer></script>
+    
+    <!-- Шрифти та іконки -->
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+
+<!-- ====== ХЕДЕР ====== -->
+<header>
+    <div class="logo">
+        <img src="img/favicon.png" alt="CyberHub Logo" loading="lazy">
+        <span>CyberHub</span>
+    </div>
+    <nav>
+        <a href="index.html"><span>Головна</span></a>
+        <a href="services.html"><span>Послуги</span></a>
+        <a href="tour.html"><span>Турніри</span></a>
+        <a href="about.html"><span>Про автора</span></a>
+    </nav>
+</header>
+
+<!-- ====== ФОНОВИЙ КОНТЕЙНЕР ====== -->
+<div class="background-container">
+    <div class="cyber-grid"></div>
+    <div class="neon-overlay"></div>
+</div>
+
+<!-- ====== ГЕРОЙ-БЛОК ====== -->
+<section class="hero">
+    <h1>Ласкаво просимо до CyberHub!</h1>
+    <div class="title-scanline"></div>
+    <p>Твій світ кіберспорту, VR та турнірів з командною грою</p>
+    
+    <!-- Кнопки герой-блока -->
+    <div class="hero-buttons">
+        <a href="#subscribe" class="cyber-btn">Забронювати місце</a>
+        <a href="tour.html" class="cyber-btn alt">Дізнатися про найближчі турніри</a>
+    </div>
+    
+    <!-- Декоративні елементи -->
+    <div class="hero-decoration">
+        <div class="floating-element"></div>
+        <div class="floating-element"></div>
+        <div class="floating-element"></div>
+    </div>
+</section>
+
+<!-- ====== ПЕРЕВАГИ ====== -->
+<section class="features">
+    <h2>Чому обирають CyberHub?</h2>
+    <div class="feature-list">
+        <!-- Потужні ПК -->
+        <div class="feature">
+            <div class="feature-icon"><i class="fas fa-desktop"></i></div>
+            <h3>Потужні ПК</h3>
+            <p>Останні процесори, відеокарти та комфортні крісла для геймерів.</p>
+        </div>
+
+        <!-- Консолі та VR -->
+        <div class="feature">
+            <div class="feature-icon"><i class="fas fa-vr-cardboard"></i></div>
+            <h3>Консолі та VR</h3>
+            <p>Віртуальна реальність, консольні зони та AR-ігри для повного занурення.</p>
+        </div>
+
+        <!-- Турніри -->
+        <div class="feature">
+            <div class="feature-icon"><i class="fas fa-trophy"></i></div>
+            <h3>Турніри</h3>
+            <p>Регулярні змагання з призами та рейтингами для всіх рівнів гравців.</p>
+        </div>
+
+        <!-- Комфорт та атмосфера -->
+        <div class="feature">
+            <div class="feature-icon"><i class="fas fa-mug-hot"></i></div>
+            <h3>Комфорт та атмосфера</h3>
+            <p>Стильний кіберпанк-дизайн та дружня спільнота геймерів.</p>
+        </div>
+    </div>
+</section>
+
+<!-- ====== ГАЛЕРЕЯ ====== -->
+<section class="gallery-section">
+    <h2>Галерея клубу</h2>
+
+    <!-- Ігрова зона -->
+    <div class="gallery-row">
+        <h3>Ігрова зона</h3>
+        <div class="image-slider">
+            <button class="prev">
+                <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="#00FFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="15 18 9 12 15 6"></polyline>
+                </svg>
+            </button>
+
+            <div class="image-track">
+                <img src="photos/zone.jpg" alt="ПК зона 1" loading="lazy">
+                <img src="photos/zone1.jpg" alt="ПК зона 2" loading="lazy">
+                <img src="photos/zone2.jpg" alt="ПК зона 3" loading="lazy">
+                <img src="photos/zone3.jpg" alt="ПК зона 4" loading="lazy">
+                <img src="photos/zone4.jpg" alt="ПК зона 5" loading="lazy">
+            </div>
+
+            <button class="next">
+                <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="#00FFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="9 18 15 12 9 6"></polyline>
+                </svg>
+            </button>
+        </div>
+    </div>
+
+    <!-- VR та Консолі -->
+    <div class="gallery-row">
+        <h3>VR та Консолі</h3>
+        <div class="image-slider">
+            <button class="prev">
+                <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="#00FFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="15 18 9 12 15 6"></polyline>
+                </svg>
+            </button>
+
+            <div class="image-track">
+                <img src="photos/vr.jpg" alt="VR 1" loading="lazy">
+                <img src="photos/vr1.jpg" alt="VR 2" loading="lazy">
+                <img src="photos/vr2.jpg" alt="VR 3" loading="lazy">
+                <img src="photos/vr3.jpg" alt="VR 4" loading="lazy">
+                <img src="photos/vr4.jpg" alt="VR 5" loading="lazy">
+            </div>
+
+            <button class="next">
+                <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="#00FFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="9 18 15 12 9 6"></polyline>
+                </svg>
+            </button>
+        </div>
+    </div>
+
+    <!-- Турніри та події -->
+    <div class="gallery-row">
+        <h3>Турніри та події</h3>
+        <div class="image-slider">
+            <button class="prev">
+                <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="#00FFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="15 18 9 12 15 6"></polyline>
+                </svg>
+            </button>
+
+            <div class="image-track">
+                <img src="photos/tour.jpg" alt="Турнір 1" loading="lazy">
+                <img src="photos/tour1.jpg" alt="Турнір 2" loading="lazy">
+                <img src="photos/tour2.jpg" alt="Турнір 3" loading="lazy">
+                <img src="photos/tour3.jpg" alt="Турнір 4" loading="lazy">
+                <img src="photos/tour4.jpg" alt="Турнір 5" loading="lazy">
+            </div>
+
+            <button class="next">
+                <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="#00FFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="9 18 15 12 9 6"></polyline>
+                </svg>
+            </button>
+        </div>
+    </div>
+</section>
+
+<!-- ====== ТУРНІРИ ====== -->
+<section class="tournaments">
+    <h2>Найближчі турніри</h2>
+    <div class="tournament-list">
+        <!-- League of Legends -->
+        <a href="tour.html" class="tournament-link">
+            <div class="tournament">
+                <h4>League of Legends</h4>
+                <p>Дата: 15 жовтня</p>
+                <p>Приз: 6000грн</p>
+                <img src="photos/lol.jpg" alt="League of Legends" loading="lazy">
+            </div>
+        </a>
+
+        <!-- CS:GO -->
+        <a href="tour.html" class="tournament-link">
+            <div class="tournament">
+                <h4>CS:GO</h4>
+                <p>Дата: 20 жовтня</p>
+                <p>Приз: 5000грн</p>
+                <img src="photos/cs2.jpg" alt="CS:GO" loading="lazy">
+            </div>
+        </a>
+
+        <!-- DOTA 2 -->
+        <a href="tour.html" class="tournament-link">
+            <div class="tournament">
+                <h4>DOTA 2</h4>
+                <p>Дата: 22 жовтня</p>
+                <p>Приз: 3000грн</p>
+                <img src="photos/dota2.jpg" alt="DOTA 2" loading="lazy">
+            </div>
+        </a>
+    </div>
+</section>
+
+<!-- ====== CTA ПІДПИСКА ====== -->
+<section id="subscribe" class="cta-subscribe">
+    <h2>Приєднуйся до CyberHub вже сьогодні!</h2>
+    <form>
+        <input type="text" placeholder="Ваше ім'я">
+        <input type="email" placeholder="Email">
+        <button type="submit">Підписатися</button>
+    </form>
+</section>
+
+<!-- ====== ВІДГУКИ ====== -->
+<div class="footer-reviews">
+    <h3><i class="fas fa-comments"></i> Відгуки гравців</h3>
+
+    <div class="reviews-container">
+        <!-- Відгук 1 -->
+        <div class="review">
+            <p>“Найкращий кіберспортивний клуб у місті! Обладнання — топ!”</p>
+            <div class="review-actions">
+                <button class="like-btn"><i class="fas fa-heart"></i> Подобається</button>
+                <button class="reply-btn"><i class="fas fa-reply"></i> Відповісти</button>
+            </div>
+            <div class="replies"></div>
+        </div>
+
+        <!-- Відгук 2 -->
+        <div class="review">
+            <p>“Крута атмосфера! Відчуваєш себе у справжньому кіберпанку.”</p>
+            <div class="review-actions">
+                <button class="like-btn"><i class="fas fa-heart"></i> Подобається</button>
+                <button class="reply-btn"><i class="fas fa-reply"></i> Відповісти</button>
+            </div>
+            <div class="replies"></div>
+        </div>
+
+        <!-- Відгук 3 -->
+        <div class="review">
+            <p>“Адміни реально круті — завжди допоможуть і створюють настрій”</p>
+            <div class="review-actions">
+                <button class="like-btn"><i class="fas fa-heart"></i> Подобається</button>
+                <button class="reply-btn"><i class="fas fa-reply"></i> Відповісти</button>
+            </div>
+            <div class="replies"></div>
+        </div>
+    </div>
+
+    <!-- Форма для відгуків -->
+    <div class="review-form-container">
+        <h4>Залишити відгук</h4>
+        <form class="review-form">
+            <div class="form-group">
+                <input type="text" id="reviewer-name" placeholder="Ваше ім'я" required>
+            </div>
+            <div class="form-group">
+                <textarea id="review-text" placeholder="Ваш відгук..." required></textarea>
+            </div>
+            <button type="submit" class="submit-review-btn">
+                <i class="fas fa-paper-plane"></i>
+                Надіслати відгук
+            </button>
+        </form>
+    </div>
+</div>
+
+<!-- ====== ФУТЕР ====== -->
+<footer>
+    <!-- Верхня частина футера -->
+    <div class="footer-bottom-horizontal">
+        <!-- Соціальні мережі -->
+        <div class="footer-socials-horizontal">
+            <h4>Соцмережі:</h4>
+            <div class="social-icons-horizontal">
+                <a href="https://www.twitch.tv/" class="social-icon-small" title="Twitch">
+                    <i class="fab fa-twitch"></i>
+                </a>
+                <a href="https://youtube.com/channel/UC0SCvFCaYmlI-7FDURW3how?si=WNOMhxDWb08dyekE" class="social-icon-small" title="YouTube">
+                    <i class="fab fa-youtube"></i>
+                </a>
+                <a href="https://discord.gg/uax6afgX" class="social-icon-small" title="Discord">
+                    <i class="fab fa-discord"></i>
+                </a>
+                <a href="#" class="social-icon-small" title="Instagram">
+                    <i class="fab fa-instagram"></i>
+                </a>
+            </div>
+        </div>
+
+        <!-- Контактна інформація -->
+        <div class="footer-contact-horizontal">
+            <div class="contact-item-horizontal">
+                <i class="fas fa-envelope"></i>
+                <a href="mailto:andrii.hurskyi.pp.2024@lpnu.ua">Написати</a>
+            </div>
+            <div class="contact-item-horizontal">
+                <i class="fas fa-phone"></i>
+                <a href="tel:+380971162507">Подзвонити</a>
+            </div>
+            <div class="contact-item-horizontal">
+                <a href="https://maps.google.com/?q=Академіка+Сахарова+23+Львів" target="_blank" title="Академіка Сахарова 23">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>Львів</span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Основна частина футера -->
+    <div class="footer-main-row">
+        <!-- Статистика -->
+        <div class="footer-stats">
+            <h3>Зараз онлайн</h3>
+            <div class="stats-grid">
+                <div class="stat">
+                    <div class="stat-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <div class="stat-number" id="online-now">24</div>
+                    <div class="stat-label">Гравців</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-icon">
+                        <i class="fas fa-gamepad"></i>
+                    </div>
+                    <div class="stat-number" id="matches-today">8</div>
+                    <div class="stat-label">Матчів сьогодні</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-icon">
+                        <i class="fas fa-trophy"></i>
+                    </div>
+                    <div class="stat-number" id="tournaments-upcoming">3</div>
+                    <div class="stat-label">Турнірів скоро</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Графік роботи -->
+        <div class="working-hours">
+            <h3>Графік роботи</h3>
+            <div class="hours-display">
+                <div class="current-status">
+                    <span class="status-dot"></span>
+                    <span class="status-text">Зараз відкрито</span>
+                </div>
+                <div class="hours">00:00 - 23:59</div>
+                <div class="days">Щодня</div>
+            </div>
+        </div>
+
+        <!-- Швидке бронювання -->
+        <div class="quick-booking">
+            <h3>Швидке бронювання</h3>
+            <div class="booking-buttons">
+                <button class="booking-btn pc-btn" onclick="openQuickBookingPC()">
+                    <div class="btn-content">
+                        <i class="fas fa-desktop"></i>
+                        <span>Забронювати PC</span>
+                    </div>
+                    <div class="btn-glow"></div>
+                </button>
+                <button class="booking-btn vr-btn" onclick="openQuickBookingVR()">
+                    <div class="btn-content">
+                        <i class="fas fa-vr-cardboard"></i>
+                        <span>Забронювати VR</span>
+                    </div>
+                    <div class="btn-glow"></div>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Нижня частина футера -->
+    <div class="footer-bottom">
+        <div class="footer-links">
+            <a href="#">Політика конфіденційності</a>
+            <a href="#">Умови використання</a>
+            <a href="#">Правила клубу</a>
+            <a href="#">FAQ</a>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2025 CyberHub. Всі права захищено.</p>
+            <p>Зроблено з <i class="fas fa-heart" style="color: var(--neon-pink);"></i> для геймерів</p>
+        </div>
+    </div>
+</footer>
+
+<!-- ====== КІБЕРПАНК ЕФЕКТИ ====== -->
+<div class="cyberpunk-overlay"></div>
+<div class="scanlines"></div>
+
+<!-- Випадкові спалахи -->
+<div class="random-flash" style="top: 20%; left: 10%; animation-delay: 0s;"></div>
+<div class="random-flash" style="top: 60%; left: 80%; animation-delay: 1.5s;"></div>
+<div class="random-flash" style="top: 40%; left: 50%; animation-delay: 3s;"></div>
+
+<!-- Додаткові ефекти -->
+<div class="cyber-dark-overlay"></div>
+<div class="scan-line"></div>
+<div class="cyber-vignette"></div>
+
+<!-- ====== МОДАЛЬНЕ ВІКНО БРОНЮВАННЯ ====== -->
+<div id="compactBookingModal" class="compact-cyber-modal">
+    <div class="compact-modal__overlay"></div>
+    <div class="compact-modal__content">
+        <!-- Хедер модального вікна -->
+        <div class="compact-modal__header">
+            <h3 class="compact-modal__title">
+                <svg class="compact-icon" width="20" height="20" viewBox="0 0 24 24">
+                    <path d="M20 18c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2H4c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2H0v2h24v-2h-4zM4 6h16v10H4V6z"/>
+                </svg>
+                ШВИДКЕ БРОНЮВАННЯ
+            </h3>
+            <button class="compact-modal__close">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M18 6L6 18M6 6L18 18"/>
+                </svg>
+            </button>
+        </div>
+
+        <!-- Тіло модального вікна -->
+        <div class="compact-modal__body">
+            <form class="compact-form" id="compactBookingForm">
+                <!-- Вибір типу бронювання -->
+                <div class="compact-type-selector">
+                    <button type="button" class="compact-type-btn active" data-type="pc">
+                        <svg class="type-btn-icon" width="18" height="18" viewBox="0 0 24 24">
+                            <path d="M20 18c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2H4c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2H0v2h24v-2h-4zM4 6h16v10H4V6z"/>
+                        </svg>
+                        PC
+                    </button>
+                    <button type="button" class="compact-type-btn" data-type="vr">
+                        <svg class="type-btn-icon" width="18" height="18" viewBox="0 0 24 24">
+                            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                            <circle cx="8" cy="12" r="1.5"/>
+                            <circle cx="16" cy="12" r="1.5"/>
+                        </svg>
+                        VR
+                    </button>
+                </div>
+
+                <!-- Поля форми -->
+                <div class="compact-fields">
+                    <div class="compact-input-group">
+                        <input type="text" class="compact-input" placeholder="Ім'я" required>
+                    </div>
+                    <div class="compact-input-group">
+                        <input type="tel" class="compact-input" placeholder="Телефон" required>
+                    </div>
+                    <div class="compact-row">
+                        <div class="compact-input-group">
+                            <input type="date" class="compact-input" required>
+                        </div>
+                        <div class="compact-input-group">
+                            <input type="time" class="compact-input" required>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Вибір тривалості -->
+                <div class="compact-duration">
+                    <div class="duration-buttons">
+                        <button type="button" class="duration-btn active" data-duration="1">1h</button>
+                        <button type="button" class="duration-btn" data-duration="2">2h</button>
+                        <button type="button" class="duration-btn" data-duration="3">3h</button>
+                        <button type="button" class="duration-btn" data-duration="4">4h+</button>
+                    </div>
+                </div>
+
+                <!-- Підсумок та кнопка відправки -->
+                <div class="compact-footer">
+                    <div class="compact-summary">
+                        <span class="summary-text">Разом:</span>
+                        <span class="summary-price" id="compactSummaryPrice">100 грн</span>
+                    </div>
+                    <button type="submit" class="compact-submit-btn">
+                        <svg class="submit-icon" width="16" height="16" viewBox="0 0 24 24">
+                            <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/>
+                        </svg>
+                        Забронювати
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

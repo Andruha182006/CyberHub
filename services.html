@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <!-- ====== МЕТАДАНІ ТА ПІДКЛЮЧЕННЯ ====== -->
+    <link rel="icon" type="image/png" href="img/favicon.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Послуги - CyberHub</title>
+    
+    <!-- Попереднє завантаження стилів -->
+    <link rel="preload" as="style" href="css/style_services.css">
+    <link rel="preload" as="style" href="css/style.css">
+    
+    <!-- Основні стилі -->
+    <link rel="stylesheet" href="css/style_services.css">
+    <link rel="stylesheet" href="css/style.css">
+    
+    <!-- Скрипти -->
+    <script src="js/script_services.js" defer></script>
+    <script src="js/script.js" defer></script>
+    
+    <!-- Шрифти та іконки -->
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body class="services-page">
+
+<!-- ====== ХЕДЕР ====== -->
+<header>
+    <div class="logo">
+        <img src="img/favicon.png" alt="CyberHub Logo" loading="lazy">
+        <span>CyberHub</span>
+    </div>
+    <nav>
+        <a href="index.html"><span>Головна</span></a>
+        <a href="services.html" class="active"><span>Послуги</span></a>
+        <a href="tour.html"><span>Турніри</span></a>
+        <a href="about.html"><span>Про автора</span></a>
+    </nav>
+</header>
+
+<!-- ====== ФОНОВИЙ КОНТЕЙНЕР ====== -->
+<div class="background-container">
+    <div class="cyber-grid"></div>
+    <div class="neon-overlay"></div>
+</div>
+
+<!-- ====== ОСНОВНИЙ КОНТЕНТ ====== -->
+<main>
+    <!-- ====== HERO СЕКЦІЯ ====== -->
+    <section class="services-hero">
+        <div class="services-hero-content">
+            <h1>Наші Послуги</h1>
+            <div class="services-title-scanline"></div>
+            <p class="intense-neon">Високоякісне обладнання та комфортні умови для ігор</p>
+            <div class="services-hero-buttons">
+                <button class="services-cyber-btn" onclick="scrollToCalculator()">РОЗРАХУВАТИ ВАРТІСТЬ</button>
+                <button class="services-cyber-btn alt" onclick="scrollToPackages()">ПЕРЕГЛЯНУТИ ПАКЕТИ</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- ====== СЕКЦІЯ ПОСЛУГ ====== -->
+    <section class="services-section">
+        <h2>Доступні Послуги</h2>
+        <div class="services-grid">
+            <!-- ПК Геймінг -->
+            <div class="service-card">
+                <div class="service-icon">
+                    <i class="fas fa-desktop"></i>
+                </div>
+                <h3>ПК Геймінг</h3>
+                <p>Потужні ігрові комп'ютери з найновішим обладнанням</p>
+                <div class="service-price">від 50 грн/год</div>
+                <button class="service-details-btn" onclick="showEquipmentDetails('pc')">Деталі обладнання</button>
+            </div>
+
+            <!-- VR Зона -->
+            <div class="service-card">
+                <div class="service-icon">
+                    <i class="fas fa-vr-cardboard"></i>
+                </div>
+                <h3>VR Зона</h3>
+                <p>Повне занурення у віртуальну реальність</p>
+                <div class="service-price">від 70 грн/год</div>
+                <button class="service-details-btn" onclick="showEquipmentDetails('vr')">Деталі обладнання</button>
+            </div>
+
+            <!-- Консолі -->
+            <div class="service-card">
+                <div class="service-icon">
+                    <i class="fas fa-gamepad"></i>
+                </div>
+                <h3>Ігрові Консолі</h3>
+                <p>PlayStation, Xbox з повним набором ігор</p>
+                <div class="service-price">від 40 грн/год</div>
+                <button class="service-details-btn" onclick="showEquipmentDetails('console')">Деталі обладнання</button>
+            </div>
+
+            <!-- Турніри -->
+            <a href="tour.html" class="service-card-link">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-trophy"></i>
+                    </div>
+                    <h3>Організація Турнірів</h3>
+                    <p>Професійна організація кіберспортивних змагань</p>
+                    <div class="service-price">індивідуально</div>
+                    <button class="service-details-btn" onclick="showTournamentInfo(); return false;">Детальніше</button>
+                </div>
+            </a>
+        </div>
+    </section>
+
+    <!-- ====== СЕКЦІЯ ОБЛАДНАННЯ ====== -->
+    <section class="equipment-section">
+        <h2>Наше Обладнання</h2>
+        <div class="equipment-tabs">
+            <button class="tab-btn active" onclick="openTab('standard-pc')">Standard PC</button>
+            <button class="tab-btn" onclick="openTab('vip-pc')">VIP PC</button>
+            <button class="tab-btn" onclick="openTab('vr-equipment')">VR Обладнання</button>
+            <button class="tab-btn" onclick="openTab('consoles')">Консолі</button>
+        </div>
+
+        <!-- Standard PC -->
+        <div id="standard-pc" class="tab-content active">
+            <div class="specs-grid">
+                <div class="spec-item">
+                    <i class="fas fa-microchip"></i>
+                    <span class="spec-label">Процесор:</span>
+                    <span class="spec-value">Intel Core i5-13400F / AMD Ryzen 5 5600X</span>
+                </div>
+                <div class="spec-item">
+                    <i class="fas fa-video"></i>
+                    <span class="spec-label">Відеокарта:</span>
+                    <span class="spec-value">NVIDIA RTX 4060 Ti 8GB</span>
+                </div>
+                <div class="spec-item">
+                    <i class="fas fa-memory"></i>
+                    <span class="spec-label">Оперативна пам'ять:</span>
+                    <span class="spec-value">16GB DDR4 3200MHz</span>
+                </div>
+                <div class="spec-item">
+                    <i class="fas fa-tv"></i>
+                    <span class="spec-label">Монітор:</span>
+                    <span class="spec-value">24" 144Hz IPS</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- VIP PC -->
+        <div id="vip-pc" class="tab-content">
+            <div class="specs-grid">
+                <div class="spec-item">
+                    <i class="fas fa-microchip"></i>
+                    <span class="spec-label">Процесор:</span>
+                    <span class="spec-value">Intel Core i7-14700K / AMD Ryzen 7 7800X3D</span>
+                </div>
+                <div class="spec-item">
+                    <i class="fas fa-video"></i>
+                    <span class="spec-label">Відеокарта:</span>
+                    <span class="spec-value">NVIDIA RTX 4080 16GB</span>
+                </div>
+                <div class="spec-item">
+                    <i class="fas fa-memory"></i>
+                    <span class="spec-label">Оперативна пам'ять:</span>
+                    <span class="spec-value">32GB DDR5 6000MHz</span>
+                </div>
+                <div class="spec-item">
+                    <i class="fas fa-tv"></i>
+                    <span class="spec-label">Монітор:</span>
+                    <span class="spec-value">27" 240Hz IPS</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- VR Обладнання -->
+        <div id="vr-equipment" class="tab-content">
+            <div class="specs-grid">
+                <div class="spec-item">
+                    <i class="fas fa-vr-cardboard"></i>
+                    <span class="spec-label">VR Шолом:</span>
+                    <span class="spec-value">Meta Quest 3</span>
+                </div>
+                <div class="spec-item">
+                    <i class="fas fa-expand-arrows-alt"></i>
+                    <span class="spec-label">Зона гри:</span>
+                    <span class="spec-value">4x4 метри</span>
+                </div>
+                <div class="spec-item">
+                    <i class="fas fa-gamepad"></i>
+                    <span class="spec-label">Контролери:</span>
+                    <span class="spec-value">Точне відстеження рухів</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Консолі -->
+        <div id="consoles" class="tab-content">
+            <div class="specs-grid">
+                <div class="spec-item">
+                    <i class="fab fa-playstation"></i>
+                    <span class="spec-label">PlayStation 5:</span>
+                    <span class="spec-value">4K 120Hz, SSD 825GB</span>
+                </div>
+                <div class="spec-item">
+                    <i class="fab fa-xbox"></i>
+                    <span class="spec-label">Xbox Series X:</span>
+                    <span class="spec-value">4K 120Hz, SSD 1TB</span>
+                </div>
+                <div class="spec-item">
+                    <i class="fas fa-tv"></i>
+                    <span class="spec-label">Монітори:</span>
+                    <span class="spec-value">27" 4K HDR</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ====== СЕКЦІЯ ПАКЕТІВ ====== -->
+    <section class="packages-section">
+        <h2>Пакети послуг</h2>
+        <div class="packages-grid">
+            <!-- Базовий пакет -->
+            <div class="package-card">
+                <h3>Базовий</h3>
+                <div class="package-price">3 години - 120 грн</div>
+                <ul class="package-features">
+                    <li><i class="fas fa-check"></i> Геймінг на Standard PC</li>
+                    <li><i class="fas fa-check"></i> Безкоштовна вода</li>
+                    <li><i class="fas fa-times"></i> VR зона</li>
+                </ul>
+                <button class="package-btn">Обрати</button>
+            </div>
+            
+            <!-- Професійний пакет -->
+            <div class="package-card popular">
+                <div class="popular-badge">Популярний</div>
+                <h3>Професійний</h3>
+                <div class="package-price">5 годин - 200 грн</div>
+                <ul class="package-features">
+                    <li><i class="fas fa-check"></i> Геймінг на VIP PC</li>
+                    <li><i class="fas fa-check"></i> 1 година VR</li>
+                    <li><i class="fas fa-check"></i> Напій на вибір</li>
+                </ul>
+                <button class="package-btn">Обрати</button>
+            </div>
+            
+            <!-- Турнірний пакет -->
+            <div class="package-card">
+                <h3>Турнірний</h3>
+                <div class="package-price">8 годин - 300 грн</div>
+                <ul class="package-features">
+                    <li><i class="fas fa-check"></i> VIP PC весь день</li>
+                    <li><i class="fas fa-check"></i> 2 години VR</li>
+                    <li><i class="fas fa-check"></i> Обід + напої</li>
+                </ul>
+                <button class="package-btn">Обрати</button>
+            </div>
+        </div>
+    </section>
+    <!-- ====== КАЛЬКУЛЯТОР ВАРТОСТІ ====== -->
+    <section class="calculator-section">
+    <div class="cyberpunk-container">
+        <h2 class="cyberpunk-title">Розрахуйте вартість оренди</h2>
+        <div class="calculator-glitch" data-text="КІБЕРПРОСТІР">CyberHub</div>
+        
+        <div class="calculator-form">
+            <div class="input-group">
+                <label class="neon-label">Тип послуги:</label>
+                <div class="select-wrapper">
+                    <select class="cyber-select" id="service-type">
+                        <option value="50">ПК Геймінг - 50 грн/год</option>
+                        <option value="70">VR Зона - 70 грн/год</option>
+                        <option value="40">Консолі - 40 грн/год</option>
+                        <option value="80">VIP PC - 80 грн/год</option>
+                    </select>
+                </div>
+            </div>
+            <div class="input-group">
+                <label class="neon-label">Кількість годин:</label>
+                <div class="input-wrapper">
+                    <input type="number" id="hours" class="cyber-input" value="1" min="1" max="24">
+                    <div class="input-buttons">
+                        <button type="button" class="value-btn" onclick="changeHours(-1)"></button>
+                        <button type="button" class="value-btn" onclick="changeHours(1)"></button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="price-display">
+                <div class="price-label">Загальна вартість:</div>
+                <div class="price-value"><span id="price">50</span> грн</div>
+                <div class="price-glow"></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+    <!-- ====== ДОДАТКОВІ ПОСЛУГИ ====== -->
+    <section class="additional-services">
+        <h2>Додаткові послуги</h2>
+        <div class="additional-grid">
+            <!-- Лаунж зона -->
+            <div class="additional-card">
+                <i class="fas fa-couch"></i>
+                <h3>Лаунж зона</h3>
+                <p>Зручні дивани, TV, настільні ігри</p>
+            </div>
+            <!-- Фуд-корт -->
+            <div class="additional-card">
+                <i class="fas fa-utensils"></i>
+                <h3>Фуд-корт</h3>
+                <p>Напої, снеки, піца та бургери</p>
+            </div>
+            <!-- Приватні заходи -->
+            <div class="additional-card">
+                <i class="fas fa-users"></i>
+                <h3>Приватні заходи</h3>
+                <p>Організація днів народження та корпоративів</p>
+            </div>
+            <!-- Друк та копіювання -->
+            <div class="additional-card">
+                <i class="fas fa-print"></i>
+                <h3>Друк та копіювання</h3>
+                <p>Послуги принтера та сканера</p>
+            </div>
+        </div>
+    </section>
+</main>
+
+<!-- ====== МОДАЛЬНЕ ВІКНО ДЛЯ БРОНЮВАННЯ ====== -->
+<div id="booking-modal" class="modal">
+    <div class="modal-content">
+        <span class="close-modal">&times;</span>
+        <h2>Бронювання</h2>
+        <form id="booking-form">
+            <div class="form-group">
+                <label>Ім'я:</label>
+                <input type="text" required>
+            </div>
+            <div class="form-group">
+                <label>Телефон:</label>
+                <input type="tel" required>
+            </div>
+            <div class="form-group">
+                <label>Послуга:</label>
+                <select>
+                    <option>ПК Геймінг</option>
+                    <option>VR Зона</option>
+                    <option>Консолі</option>
+                </select>
+            </div>
+            <button type="submit" class="submit-btn">Забронювати</button>
+        </form>
+    </div>
+</div>
+
+<!-- ====== ФУТЕР ====== -->
+<footer>
+    <!-- Верхня частина футера -->
+    <div class="footer-bottom-horizontal">
+        <!-- Соціальні мережі -->
+        <div class="footer-socials-horizontal">
+            <h4>Соцмережі:</h4>
+            <div class="social-icons-horizontal">
+                <a href="https://www.twitch.tv/" class="social-icon-small" title="Twitch">
+                    <i class="fab fa-twitch"></i>
+                </a>
+                <a href="https://youtube.com/channel/UC0SCvFCaYmlI-7FDURW3how?si=WNOMhxDWb08dyekE" class="social-icon-small" title="YouTube">
+                    <i class="fab fa-youtube"></i>
+                </a>
+                <a href="https://discord.gg/uax6afgX" class="social-icon-small" title="Discord">
+                    <i class="fab fa-discord"></i>
+                </a>
+                <a href="#" class="social-icon-small" title="Instagram">
+                    <i class="fab fa-instagram"></i>
+                </a>
+            </div>
+        </div>
+
+        <!-- Контактна інформація -->
+        <div class="footer-contact-horizontal">
+            <div class="contact-item-horizontal">
+                <i class="fas fa-envelope"></i>
+                <a href="mailto:andrii.hurskyi.pp.2024@lpnu.ua">Написати</a>
+            </div>
+            <div class="contact-item-horizontal">
+                <i class="fas fa-phone"></i>
+                <a href="tel:+380971162507">Подзвонити</a>
+            </div>
+            <div class="contact-item-horizontal">
+                <a href="https://maps.google.com/?q=Академіка+Сахарова+23+Львів" target="_blank" title="Академіка Сахарова 23">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>Львів</span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Основна частина футера -->
+    <div class="footer-main-row">
+        <!-- Статистика -->
+        <div class="footer-stats">
+            <h3>Зараз онлайн</h3>
+            <div class="stats-grid">
+                <div class="stat">
+                    <div class="stat-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <div class="stat-number" id="online-now">24</div>
+                    <div class="stat-label">Гравців</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-icon">
+                        <i class="fas fa-gamepad"></i>
+                    </div>
+                    <div class="stat-number" id="matches-today">8</div>
+                    <div class="stat-label">Матчів сьогодні</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-icon">
+                        <i class="fas fa-trophy"></i>
+                    </div>
+                    <div class="stat-number" id="tournaments-upcoming">3</div>
+                    <div class="stat-label">Турнірів скоро</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Графік роботи -->
+        <div class="working-hours">
+            <h3>Графік роботи</h3>
+            <div class="hours-display">
+                <div class="current-status">
+                    <span class="status-dot"></span>
+                    <span class="status-text">Зараз відкрито</span>
+                </div>
+                <div class="hours">00:00 - 23:59</div>
+                <div class="days">Щодня</div>
+            </div>
+        </div>
+
+        <!-- Швидке бронювання -->
+        <div class="quick-booking">
+            <h3>Швидке бронювання</h3>
+            <div class="booking-buttons">
+                <button class="booking-btn pc-btn" onclick="openBookingModal()">
+                    <div class="btn-content">
+                        <i class="fas fa-desktop"></i>
+                        <span>Забронювати PC</span>
+                    </div>
+                    <div class="btn-glow"></div>
+                </button>
+                <button class="booking-btn vr-btn" onclick="openVRBookingModal()">
+                    <div class="btn-content">
+                        <i class="fas fa-vr-cardboard"></i>
+                        <span>Забронювати VR</span>
+                    </div>
+                    <div class="btn-glow"></div>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Нижня частина футера -->
+    <div class="footer-bottom">
+        <div class="footer-links">
+            <a href="#">Політика конфіденційності</a>
+            <a href="#">Умови використання</a>
+            <a href="#">Правила клубу</a>
+            <a href="#">FAQ</a>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2025 CyberHub. Всі права захищено.</p>
+            <p>Зроблено з <i class="fas fa-heart" style="color: var(--neon-pink);"></i> для геймерів</p>
+        </div>
+    </div>
+</footer>
+
+<!-- ====== КІБЕРПАНК ЕФЕКТИ ====== -->
+<div class="cyberpunk-overlay"></div>
+<div class="scanlines"></div>
+
+<!-- Випадкові спалахи -->
+<div class="random-flash" style="top: 20%; left: 10%; animation-delay: 0s;"></div>
+<div class="random-flash" style="top: 60%; left: 80%; animation-delay: 1.5s;"></div>
+<div class="random-flash" style="top: 40%; left: 50%; animation-delay: 3s;"></div>
+
+<!-- Додаткові ефекти -->
+<div class="cyber-dark-overlay"></div>
+<div class="scan-line"></div>
+<div class="cyber-vignette"></div>
+
+<!-- ====== КОМПАКТНЕ МОДАЛЬНЕ ВІКНО БРОНЮВАННЯ ====== -->
+<div id="compactBookingModal" class="compact-cyber-modal">
+    <div class="compact-modal__overlay"></div>
+    <div class="compact-modal__content">
+        <!-- Хедер модального вікна -->
+        <div class="compact-modal__header">
+            <h3 class="compact-modal__title">
+                <svg class="compact-icon" width="20" height="20" viewBox="0 0 24 24">
+                    <path d="M20 18c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2H4c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2H0v2h24v-2h-4zM4 6h16v10H4V6z"/>
+                </svg>
+                ШВИДКЕ БРОНЮВАННЯ
+            </h3>
+            <button class="compact-modal__close">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M18 6L6 18M6 6L18 18"/>
+                </svg>
+            </button>
+        </div>
+
+        <!-- Тіло модального вікна -->
+        <div class="compact-modal__body">
+            <form class="compact-form" id="compactBookingForm">
+                <!-- Вибір типу бронювання -->
+                <div class="compact-type-selector">
+                    <button type="button" class="compact-type-btn active" data-type="pc">
+                        <svg class="type-btn-icon" width="18" height="18" viewBox="0 0 24 24">
+                            <path d="M20 18c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2H4c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2H0v2h24v-2h-4zM4 6h16v10H4V6z"/>
+                        </svg>
+                        PC
+                    </button>
+                    <button type="button" class="compact-type-btn" data-type="vr">
+                        <svg class="type-btn-icon" width="18" height="18" viewBox="0 0 24 24">
+                            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                            <circle cx="8" cy="12" r="1.5"/>
+                            <circle cx="16" cy="12" r="1.5"/>
+                        </svg>
+                        VR
+                    </button>
+                </div>
+
+                <!-- Поля форми -->
+                <div class="compact-fields">
+                    <div class="compact-input-group">
+                        <input type="text" class="compact-input" placeholder="Ім'я" required>
+                    </div>
+                    <div class="compact-input-group">
+                        <input type="tel" class="compact-input" placeholder="Телефон" required>
+                    </div>
+                    <div class="compact-row">
+                        <div class="compact-input-group">
+                            <input type="date" class="compact-input" required>
+                        </div>
+                        <div class="compact-input-group">
+                            <input type="time" class="compact-input" required>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Вибір тривалості -->
+                <div class="compact-duration">
+                    <div class="duration-buttons">
+                        <button type="button" class="duration-btn active" data-duration="1">1h</button>
+                        <button type="button" class="duration-btn" data-duration="2">2h</button>
+                        <button type="button" class="duration-btn" data-duration="3">3h</button>
+                        <button type="button" class="duration-btn" data-duration="4">4h+</button>
+                    </div>
+                </div>
+
+                <!-- Підсумок та кнопка відправки -->
+                <div class="compact-footer">
+                    <div class="compact-summary">
+                        <span class="summary-text">Разом:</span>
+                        <span class="summary-price" id="compactSummaryPrice">100 грн</span>
+                    </div>
+                    <button type="submit" class="compact-submit-btn">
+                        <svg class="submit-icon" width="16" height="16" viewBox="0 0 24 24">
+                            <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/>
+                        </svg>
+                        Забронювати
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

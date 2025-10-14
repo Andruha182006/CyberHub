@@ -1,0 +1,734 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <!-- === МЕТАДАНІ ТА ПОСИЛАННЯ === -->
+    <link rel="icon" type="image/png" href="img/favicon.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Турніри - CyberHub</title>
+    
+    <!-- Стилі -->
+    <link rel="preload" as="style" href="css/style_tour.css">
+    <link rel="stylesheet" href="css/style_tour.css">
+    <link rel="preload" as="style" href="css/style.css">
+    <link rel="stylesheet" href="css/style.css">
+    
+    <!-- Шрифти та іконки -->
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Скрипти -->
+    <script src="js/script_tour.js" defer></script>
+</head>
+
+<body class="tour-page">
+    <!-- === ШАПКА САЙТУ === -->
+    <header>
+        <div class="logo">
+            <img src="img/favicon.png" alt="CyberHub Logo" loading="lazy">
+            <span>CyberHub</span>
+        </div>
+        <nav>
+            <a href="index.html"><span>Головна</span></a>
+            <a href="services.html"><span>Послуги</span></a>
+            <a href="tour.html" class="active"><span>Турніри</span></a>
+            <a href="about.html"><span>Про автора</span></a>
+        </nav>
+    </header>
+
+    <!-- === ФОН ТА ЕФЕКТИ === -->
+    <div class="background-container">
+        <div class="cyber-grid"></div>
+        <div class="neon-overlay"></div>
+    </div>
+
+    <!-- === ОСНОВНИЙ КОНТЕНТ === -->
+    <main>
+        <!-- Герой секція -->
+        <section class="tour-hero">
+            <div class="tour-hero-content">
+                <h1>Кіберспортивні Турніри</h1>
+                <div class="tour-title-scanline"></div>
+                <p class="intense-neon">Змагайся, перемагай, отримуй призи!</p>
+                <div class="tour-hero-buttons">
+                    <button class="tour-cyber-btn" onclick="scrollToRegistration()">
+                        <i class="fas fa-user-plus"></i>
+                        ЗАРЕЄСТРУВАТИСЯ
+                    </button>
+                    <button class="tour-cyber-btn alt" onclick="scrollToUpcoming()">
+                        <i class="fas fa-calendar-alt"></i>
+                        МАЙБУТНІ ТУРНІРИ
+                    </button>
+                </div>
+            </div>
+            <div class="hero-decoration">
+                <div class="floating-element"></div>
+                <div class="floating-element"></div>
+                <div class="floating-element"></div>
+            </div>
+        </section>
+
+        <!-- Таймер турніру -->
+        <section class="countdown-section">
+            <div class="cyberpunk-container">
+                <h2 class="cyberpunk-title">До початку головного турніру залишилось</h2>
+                <div class="countdown-timer">
+                    <div class="time-unit">
+                        <span id="days" class="time-value">00</span>
+                        <span class="time-label">Днів</span>
+                    </div>
+                    <div class="time-unit">
+                        <span id="hours" class="time-value">00</span>
+                        <span class="time-label">Годин</span>
+                    </div>
+                    <div class="time-unit">
+                        <span id="minutes" class="time-value">00</span>
+                        <span class="time-label">Хвилин</span>
+                    </div>
+                    <div class="time-unit">
+                        <span id="seconds" class="time-value">00</span>
+                        <span class="time-label">Секунд</span>
+                    </div>
+                </div>
+                <div class="tournament-status">
+                    <div class="status-indicator">
+                        <div class="status-dot"></div>
+                        <span class="status-text">Реєстрація відкрита - встигни забронювати місце!</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Відео з YouTube -->
+        <section class="video-section">
+            <h2>Огляд Турнірів</h2>
+            <p class="video-description">Заглянь за куліси наших турнірів та відчуй атмосферу справжніх кіберспортивних змагань</p>
+            <div class="video-container">
+                <div class="video-wrapper">
+                    <iframe 
+                        width="900" 
+                        height="500" 
+                        src="https://www.youtube.com/embed/2nIX_w3Rdrs" 
+                        title="Кіберспортивний турнір CyberHub" 
+                        frameborder="0" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                        allowfullscreen>
+                    </iframe>
+                    <div class="video-overlay"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Активний турнір -->
+        <section class="active-tournament">
+            <h2>Поточний Турнір</h2>
+            <div class="tournament-card featured">
+                <div class="featured-badge">
+                    <i class="fas fa-crown"></i>
+                    Головний турнір сезону
+                </div>
+                <div class="tournament-header">
+                    <div class="game-icon dota">
+                        <img src="img/dota2.png" alt="Dota 2" class="game-icon-logo" loading="lazy">
+                    </div>
+                    <div class="tournament-info">
+                        <h3>DOTA 2 Championship</h3>
+                        <div class="tournament-meta">
+                            <span class="prize-pool"><i class="fas fa-trophy"></i> Призовий фонд: 3000 грн</span>
+                            <span class="participants"><i class="fas fa-users"></i> Учасники: 16 команд</span>
+                            <span class="format"><i class="fas fa-sitemap"></i> Формат: Double Elimination</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="tournament-details-grid">
+                    <div class="detail-card">
+                        <i class="fas fa-calendar-day"></i>
+                        <div class="detail-content">
+                            <strong>Дата проведення</strong>
+                            <span>15 жовтня 2025 року</span>
+                        </div>
+                    </div>
+                    <div class="detail-card">
+                        <i class="fas fa-clock"></i>
+                        <div class="detail-content">
+                            <strong>Час початку</strong>
+                            <span>18:00</span>
+                        </div>
+                    </div>
+                    <div class="detail-card">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div class="detail-content">
+                            <strong>Місце проведення</strong>
+                            <span>CyberHub, Львів</span>
+                        </div>
+                    </div>
+                    <div class="detail-card">
+                        <i class="fas fa-gamepad"></i>
+                        <div class="detail-content">
+                            <strong>Ігровий формат</strong>
+                            <span>5v5</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tournament-description">
+                    <p><strong>Головний турнір сезону!</strong> Запрошуємо всіх бажаючих гравців приєднатися до наймасштабнішого DOTA 2 чемпіонату у нашому клубі. Поспішайте зареєструвати свою команду та покажіть свою майстерність у командній грі! Турнір проводиться за системою Double Elimination з призовим фондом 3000 гривень.</p>
+                    
+                    <div class="prize-breakdown">
+                        <h4>Призовий фонд розподіляється наступним чином:</h4>
+                        <ul>
+                            <li><i class="fas fa-medal" style="color: #FFD700;"></i> 1 місце: <strong>1500 грн</strong></li>
+                            <li><i class="fas fa-medal" style="color: #C0C0C0;"></i> 2 місце: <strong>1000 грн</strong></li>
+                            <li><i class="fas fa-medal" style="color: #CD7F32;"></i> 3 місце: <strong>500 грн</strong></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="tournament-actions">
+                    <button class="register-btn main" onclick="openRegistrationModal(event)">
+                        <i class="fas fa-user-plus"></i>
+                        ЗАРЕЄСТРУВАТИ КОМАНДУ
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Майбутні турніри -->
+        <section class="upcoming-tournaments">
+            <h2>Майбутні Турніри</h2>
+            <p class="section-subtitle">Готуйся до нових викликів - встигни підготувати команду!</p>
+            <div class="tournaments-grid">
+                <!-- Counter-Strike 2 -->
+                <div class="tournament-card">
+                    <div class="tournament-header">
+                        <div class="game-icon cs2">
+                            <img src="img/cs2.png" alt="Counter-Strike 2" class="game-icon-logo" loading="lazy">
+                        </div>
+                        <div class="tournament-info">
+                            <h3>Counter-Strike 2</h3>
+                            <div class="tournament-meta">
+                                <span class="prize-pool"><i class="fas fa-trophy"></i> Призовий фонд: 5000 грн</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tournament-details-grid compact">
+                        <div class="detail-item">
+                            <i class="fas fa-calendar"></i>
+                            <span><strong>Дата:</strong> 25 жовтня 2025</span>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-users"></i>
+                            <span><strong>Команд:</strong> 8</span>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-sitemap"></i>
+                            <span><strong>Формат:</strong> Single Elimination</span>
+                        </div>
+                    </div>
+                    <button class="notify-btn" onclick="notifyTournament('Counter-Strike 2')">
+                        <i class="fas fa-bell"></i>
+                        ПОВІДОМИТИ ПРО РЕЄСТРАЦІЮ
+                    </button>
+                </div>
+
+                <!-- VALORANT -->
+                <div class="tournament-card">
+                    <div class="tournament-header">
+                        <div class="game-icon valorant">
+                            <img src="img/valorant.png" alt="VALORANT" class="game-icon-logo" loading="lazy">
+                        </div>
+                        <div class="tournament-info">
+                            <h3>VALORANT</h3>
+                            <div class="tournament-meta">
+                                <span class="prize-pool"><i class="fas fa-trophy"></i> Призовий фонд: 4000 грн</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tournament-details-grid compact">
+                        <div class="detail-item">
+                            <i class="fas fa-calendar"></i>
+                            <span><strong>Дата:</strong> 5 листопада 2025</span>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-users"></i>
+                            <span><strong>Команд:</strong> 12</span>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-sitemap"></i>
+                            <span><strong>Формат:</strong> Round Robin</span>
+                        </div>
+                    </div>
+                    <button class="notify-btn" onclick="notifyTournament('VALORANT')">
+                        <i class="fas fa-bell"></i>
+                        ПОВІДОМИТИ ПРО РЕЄСТРАЦІЮ
+                    </button>
+                </div>
+
+                <!-- League of Legends -->
+                <div class="tournament-card">
+                    <div class="tournament-header">
+                        <div class="game-icon lol">
+                            <img src="../img/lol.png" alt="League of Legends" class="game-icon-logo" loading="lazy">
+                        </div>
+                        <div class="tournament-info">
+                            <h3>League of Legends</h3>
+                            <div class="tournament-meta">
+                                <span class="prize-pool"><i class="fas fa-trophy"></i> Призовий фонд: 6000 грн</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tournament-details-grid compact">
+                        <div class="detail-item">
+                            <i class="fas fa-calendar"></i>
+                            <span><strong>Дата:</strong> 15 листопада 2025</span>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-users"></i>
+                            <span><strong>Команд:</strong> 10</span>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-sitemap"></i>
+                            <span><strong>Формат:</strong> Double Elimination</span>
+                        </div>
+                    </div>
+                    <button class="notify-btn" onclick="notifyTournament('League of Legends')">
+                        <i class="fas fa-bell"></i>
+                        ПОВІДОМИТИ ПРО РЕЄСТРАЦІЮ
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Карта -->
+        <section class="map-section">
+            <h2>Де нас знайти?</h2>
+            <p class="location-text">м. Львів, вул. Академіка Сахарова, 23</p>
+            <p class="location-subtitle">Приходь, обирай місце та ставай частиною нашої кіберспортивної спільноти!</p>
+            <div class="map-container">
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d8063.413979116484!2d24.011817162220353!3d49.82329681422999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x473ae78eb4d0c091%3A0x50513bea0536459b!2z0JPRg9GA0YLQvtC20LjRgtC-0Log4oSWOCDQndCjICLQm9GM0LLRltCy0YHQutCwINC_0L7Qu9GW0YLQtdGF0L3RltC60LAi!5e1!3m2!1suk!2sua!4v1760117825409!5m2!1suk!2sua" 
+                    width="100%" 
+                    height="400" 
+                    style="border:0; border-radius: 15px;" 
+                    allowfullscreen="" 
+                    loading="lazy">
+                </iframe>
+            </div>
+        </section>
+    </main>
+
+    <!-- === ФУТЕР === -->
+    <footer>
+        <!-- Горизонтальна частина футера -->
+        <div class="footer-bottom-horizontal">
+            <!-- Соцмережі -->
+            <div class="footer-socials-horizontal">
+                <h4>Соцмережі:</h4>
+                <div class="social-icons-horizontal">
+                    <a href="https://www.twitch.tv/" class="social-icon-small" title="Twitch">
+                        <i class="fab fa-twitch"></i>
+                    </a>
+                    <a href="https://youtube.com/channel/UC0SCvFCaYmlI-7FDURW3how?si=WNOMhxDWb08dyekE" class="social-icon-small" title="YouTube">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                    <a href="https://discord.gg/uax6afgX" class="social-icon-small" title="Discord">
+                        <i class="fab fa-discord"></i>
+                    </a>
+                    <a href="#" class="social-icon-small" title="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Контакти -->
+            <div class="footer-contact-horizontal">
+                <div class="contact-item-horizontal">
+                    <i class="fas fa-envelope"></i>
+                    <a href="mailto:andrii.hurskyi.pp.2024@lpnu.ua">Написати</a>
+                </div>
+                <div class="contact-item-horizontal">
+                    <i class="fas fa-phone"></i>
+                    <a href="tel:+380971162507">Подзвонити</a>
+                </div>
+                <div class="contact-item-horizontal">
+                    <a href="https://maps.google.com/?q=Академіка+Сахарова+23+Львів" target="_blank" title="Академіка Сахарова 23">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Львів</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Основна частина футера -->
+        <div class="footer-main-row">
+            <!-- Статистика -->
+            <div class="footer-stats">
+                <h3>Зараз онлайн</h3>
+                <div class="stats-grid">
+                    <div class="stat">
+                        <div class="stat-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <div class="stat-number" id="online-now">24</div>
+                        <div class="stat-label">Гравців</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-icon">
+                            <i class="fas fa-gamepad"></i>
+                        </div>
+                        <div class="stat-number" id="matches-today">8</div>
+                        <div class="stat-label">Матчів сьогодні</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-icon">
+                            <i class="fas fa-trophy"></i>
+                        </div>
+                        <div class="stat-number" id="tournaments-upcoming">3</div>
+                        <div class="stat-label">Турнірів скоро</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Графік роботи -->
+            <div class="working-hours">
+                <h3>Графік роботи</h3>
+                <div class="hours-display">
+                    <div class="current-status">
+                        <span class="status-dot"></span>
+                        <span class="status-text">Зараз відкрито</span>
+                    </div>
+                    <div class="hours">00:00 - 23:59</div>
+                    <div class="days">Щодня</div>
+                </div>
+            </div>
+
+            <!-- Швидке бронювання -->
+            <div class="quick-booking">
+                <h3>Швидке бронювання</h3>
+                <div class="booking-buttons">
+                    <button class="booking-btn pc-btn" onclick="openBookingModal()">
+                        <div class="btn-content">
+                            <i class="fas fa-desktop"></i>
+                            <span>Забронювати PC</span>
+                        </div>
+                        <div class="btn-glow"></div>
+                    </button>
+                    <button class="booking-btn vr-btn" onclick="openVRBookingModal()">
+                        <div class="btn-content">
+                            <i class="fas fa-vr-cardboard"></i>
+                            <span>Забронювати VR</span>
+                        </div>
+                        <div class="btn-glow"></div>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Нижня частина футера -->
+        <div class="footer-bottom">
+            <div class="footer-links">
+                <a href="#">Політика конфіденційності</a>
+                <a href="#">Умови використання</a>
+                <a href="#">Правила клубу</a>
+                <a href="#">FAQ</a>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 CyberHub. Всі права захищено.</p>
+                <p>Зроблено з <i class="fas fa-heart" style="color: var(--neon-pink);"></i> для геймерів</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- === МОДАЛЬНІ ВІКНА === -->
+
+    <!-- Модальне вікно реєстрації на турнір -->
+    <div id="registration-modal" class="modal">
+        <div class="modal-content cyber-modal">
+            <span class="close-modal" onclick="closeRegistrationModal()">&times;</span>
+            
+            <div class="modal-header">
+                <h2 class="modal-title">
+                    <i class="fas fa-user-plus"></i>
+                    Реєстрація на турнір
+                </h2>
+                <div class="tournament-info-badge">
+                    <i class="fas fa-trophy"></i>
+                    DOTA 2 Championship
+                </div>
+            </div>
+
+            <form id="registration-form" class="cyber-form">
+                <!-- Інформація про турнір -->
+                <div class="tournament-details-modal">
+                    <div class="detail-row">
+                        <div class="detail-col">
+                            <i class="fas fa-calendar"></i>
+                            <span>15 жовтня 2025</span>
+                        </div>
+                        <div class="detail-col">
+                            <i class="fas fa-clock"></i>
+                            <span>18:00</span>
+                        </div>
+                        <div class="detail-col">
+                            <i class="fas fa-trophy"></i>
+                            <span>3000 грн</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Основна інформація команди -->
+                <div class="form-section">
+                    <h3 class="section-title">
+                        <i class="fas fa-users"></i>
+                        Інформація про команду
+                    </h3>
+                    
+                    <div class="form-group">
+                        <label class="neon-label">
+                            <i class="fas fa-flag"></i>
+                            Назва команди *
+                        </label>
+                        <input type="text" class="cyber-input" required placeholder="Введіть креативну назву вашої команди">
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label class="neon-label">
+                                <i class="fas fa-crown"></i>
+                                Капітан команди *
+                            </label>
+                            <input type="text" class="cyber-input" required placeholder="Повне ім'я капітана">
+                        </div>
+                        <div class="form-group">
+                            <label class="neon-label">
+                                <i class="fas fa-phone"></i>
+                                Телефон *
+                            </label>
+                            <input type="tel" class="cyber-input" required placeholder="+380 XX XXX XX XX">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="neon-label">
+                            <i class="fas fa-envelope"></i>
+                            Email *
+                        </label>
+                        <input type="email" class="cyber-input" required placeholder="your@email.com">
+                    </div>
+                </div>
+
+                <!-- Склад команди -->
+                <div class="form-section">
+                    <h3 class="section-title">
+                        <i class="fas fa-gamepad"></i>
+                        Склад команди (5 гравців)
+                    </h3>
+                    
+                    <div class="players-grid">
+                        <div class="player-input">
+                            <label class="neon-label small">Гравець 1 (Капітан) *</label>
+                            <input type="text" class="cyber-input" required placeholder="Нікнейм у DOTA 2">
+                        </div>
+                        <div class="player-input">
+                            <label class="neon-label small">Гравець 2 *</label>
+                            <input type="text" class="cyber-input" required placeholder="Нікнейм у DOTA 2">
+                        </div>
+                        <div class="player-input">
+                            <label class="neon-label small">Гравець 3 *</label>
+                            <input type="text" class="cyber-input" required placeholder="Нікнейм у DOTA 2">
+                        </div>
+                        <div class="player-input">
+                            <label class="neon-label small">Гравець 4 *</label>
+                            <input type="text" class="cyber-input" required placeholder="Нікнейм у DOTA 2">
+                        </div>
+                        <div class="player-input">
+                            <label class="neon-label small">Гравець 5 *</label>
+                            <input type="text" class="cyber-input" required placeholder="Нікнейм у DOTA 2">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Додаткова інформація -->
+                <div class="form-section">
+                    <h3 class="section-title">
+                        <i class="fas fa-info-circle"></i>
+                        Додаткова інформація
+                    </h3>
+
+                    <div class="form-group">
+                        <label class="neon-label">
+                            <i class="fas fa-chart-line"></i>
+                            Рівень команди
+                        </label>
+                        <div class="select-wrapper">
+                            <select class="cyber-select">
+                                <option value="">Оберіть рівень команди</option>
+                                <option value="beginner">Початківці (0-1000 MMR)</option>
+                                <option value="intermediate">Любителі (1000-3000 MMR)</option>
+                                <option value="advanced">Досвідчені (3000-5000 MMR)</option>
+                                <option value="pro">Професіонали (5000+ MMR)</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="neon-label">
+                            <i class="fas fa-comment"></i>
+                            Додаткові коментарі
+                        </label>
+                        <textarea class="cyber-textarea" placeholder="Додаткова інформація про команду, досвід участі в турнірах тощо..." rows="3"></textarea>
+                    </div>
+                </div>
+
+                <!-- Правила та підтвердження -->
+                <div class="form-section rules-section">
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="agree-rules" required class="cyber-checkbox">
+                        <label for="agree-rules" class="checkbox-label">
+                            <i class="fas fa-check"></i>
+                            Я погоджуюсь з <a href="#" class="rules-link">правилами турніру</a> та 
+                            <a href="#" class="rules-link">умовами участі</a> *
+                        </label>
+                    </div>
+                    
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="agree-data" required class="cyber-checkbox">
+                        <label for="agree-data" class="checkbox-label">
+                            <i class="fas fa-check"></i>
+                            Я погоджуюсь на обробку моїх персональних даних *
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Кнопки дій -->
+                <div class="form-actions">
+                    <button type="submit" class="submit-btn main">
+                        <i class="fas fa-paper-plane"></i>
+                        ПОДАТИ ЗАЯВКУ
+                    </button>
+                    <button type="button" class="cancel-btn" onclick="closeRegistrationModal()">
+                        <i class="fas fa-times"></i>
+                        СКАСУВАТИ
+                    </button>
+                </div>
+                
+                <div class="form-footer">
+                    <p>
+                        <i class="fas fa-info-circle"></i> 
+                        Після реєстрації ми зв'яжемося з вами для підтвердження участі
+                    </p>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Компактне модальне вікно бронювання -->
+    <div id="compactBookingModal" class="compact-cyber-modal">
+        <div class="compact-modal__overlay"></div>
+        <div class="compact-modal__content">
+            <!-- Хедер -->
+            <div class="compact-modal__header">
+                <h3 class="compact-modal__title">
+                    <svg class="compact-icon" width="20" height="20" viewBox="0 0 24 24">
+                        <path d="M20 18c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2H4c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2H0v2h24v-2h-4zM4 6h16v10H4V6z"/>
+                    </svg>
+                    ШВИДКЕ БРОНЮВАННЯ
+                </h3>
+                <button class="compact-modal__close">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M18 6L6 18M6 6L18 18"/>
+                    </svg>
+                </button>
+            </div>
+
+            <!-- Тіло -->
+            <div class="compact-modal__body">
+                <form class="compact-form" id="compactBookingForm">
+                    <!-- Вибір типу -->
+                    <div class="compact-type-selector">
+                        <button type="button" class="compact-type-btn active" data-type="pc">
+                            <svg class="type-btn-icon" width="18" height="18" viewBox="0 0 24 24">
+                                <path d="M20 18c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2H4c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2H0v2h24v-2h-4zM4 6h16v10H4V6z"/>
+                            </svg>
+                            PC
+                        </button>
+                        <button type="button" class="compact-type-btn" data-type="vr">
+                            <svg class="type-btn-icon" width="18" height="18" viewBox="0 0 24 24">
+                                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                                <circle cx="8" cy="12" r="1.5"/>
+                                <circle cx="16" cy="12" r="1.5"/>
+                            </svg>
+                            VR
+                        </button>
+                    </div>
+
+                    <!-- Основні поля -->
+                    <div class="compact-fields">
+                        <div class="compact-input-group">
+                            <input type="text" class="compact-input" placeholder="Ім'я" required>
+                        </div>
+                        <div class="compact-input-group">
+                            <input type="tel" class="compact-input" placeholder="Телефон" required>
+                        </div>
+                        <div class="compact-row">
+                            <div class="compact-input-group">
+                                <input type="date" class="compact-input" required>
+                            </div>
+                            <div class="compact-input-group">
+                                <input type="time" class="compact-input" required>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Тривалість -->
+                    <div class="compact-duration">
+                        <div class="duration-buttons">
+                            <button type="button" class="duration-btn active" data-duration="1">1h</button>
+                            <button type="button" class="duration-btn" data-duration="2">2h</button>
+                            <button type="button" class="duration-btn" data-duration="3">3h</button>
+                            <button type="button" class="duration-btn" data-duration="4">4h+</button>
+                        </div>
+                    </div>
+
+                    <!-- Підсумок та кнопка -->
+                    <div class="compact-footer">
+                        <div class="compact-summary">
+                            <span class="summary-text">Разом:</span>
+                            <span class="summary-price" id="compactSummaryPrice">100 грн</span>
+                        </div>
+                        <button type="submit" class="compact-submit-btn">
+                            <svg class="submit-icon" width="16" height="16" viewBox="0 0 24 24">
+                                <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/>
+                            </svg>
+                            Забронювати
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- === ВІЗУАЛЬНІ ЕФЕКТИ === -->
+    <div class="cyberpunk-overlay"></div>
+    <div class="scanlines"></div>
+
+    <!-- Випадкові спалахи -->
+    <div class="random-flash" style="top: 20%; left: 10%; animation-delay: 0s;"></div>
+    <div class="random-flash" style="top: 60%; left: 80%; animation-delay: 1.5s;"></div>
+    <div class="random-flash" style="top: 40%; left: 50%; animation-delay: 3s;"></div>
+    
+    <!-- Кіберпанк з затемненням -->
+    <div class="cyber-dark-overlay"></div>
+    <div class="scan-line"></div>
+
+    <!-- Додаткові ефекти -->
+    <div class="cyber-vignette"></div>
+
+    <!-- === СКРИПТИ === -->
+    <script src="js/script_tour.js" defer></script>
+    <script src="js/script.js" defer></script>
+    <script src="js/script_services.js" defer></script>
+</body>
+</html>
