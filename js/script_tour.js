@@ -65,7 +65,7 @@ function showNotification(message, type = 'info') {
 let tournamentCountdownTimer;
 
 function updateTournamentCountdown() {
-    const tournamentDate = new Date('2025-10-15T18:00:00').getTime();
+    const tournamentDate = new Date('2025-10-16T18:00:00').getTime();
     const now = new Date().getTime();
     const distance = tournamentDate - now;
 
@@ -276,4 +276,5 @@ document.addEventListener('DOMContentLoaded', function() {
     document.addEventListener('keydown', function(e) {
         if (e.key === 'Escape') closeRegistrationModal();
     });
+
 });
