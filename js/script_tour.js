@@ -65,23 +65,24 @@ function showNotification(message, type = 'info') {
 let tournamentCountdownTimer;
 
 function updateTournamentCountdown() {
-    const tournamentDate = new Date('2025-10-20T18:00:00').getTime();
+    const tournamentDate = new Date('2025-10-15T18:00:00').getTime();
     const now = new Date().getTime();
     const distance = tournamentDate - now;
 
     if (distance < 0) {
-        clearInterval(tournamentCountdownTimer);
-        const timerElement = document.querySelector('.countdown-timer');
-        if (timerElement) {
-            timerElement.innerHTML = `
-                <div class="tournament-started">
-                    <i class="fas fa-trophy"></i>
-                    <div>Турнір розпочався!</div>
-                </div>
-            `;
-        }
-        return;
+    clearInterval(tournamentCountdownTimer);
+    const timerElement = document.querySelector('.countdown-timer');
+    if (timerElement) {
+        timerElement.innerHTML = `
+            <div class="tournament-started animated-entry">
+                <i class="fas fa-trophy trophy-icon"></i>
+                <div class="started-text">Турнір розпочався!</div>
+                <div class="sub-text">Приєднуйтесь до гри!</div>
+            </div>
+        `;
     }
+    return;
+}
 
     const days = Math.floor(distance / (1000 * 60 * 60 * 24));
     const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
@@ -102,7 +103,7 @@ function updateTournamentCountdown() {
 
 // Сповіщення про турніри
 function notifyTournament(tournamentName) {
-    showNotification(`🔔 Ви будете повідомлені про турнір "${tournamentName}"`, 'info');
+    showNotification(` Ви будете повідомлені про турнір "${tournamentName}"`, 'info');
     
     const btn = event.target.closest('.notify-btn');
     if (btn) {
@@ -170,7 +171,7 @@ document.addEventListener('DOMContentLoaded', function() {
             submitBtn.disabled = true;
             
             setTimeout(() => {
-                showNotification(`🎉 Команда "${teamName}" успішно зареєстрована!`, 'success');
+                showNotification(` Команда "${teamName}" успішно зареєстрована!`, 'success');
                 this.reset();
                 
                 submitBtn.innerHTML = originalText;
@@ -276,6 +277,4 @@ document.addEventListener('DOMContentLoaded', function() {
     document.addEventListener('keydown', function(e) {
         if (e.key === 'Escape') closeRegistrationModal();
     });
-
 });
-
